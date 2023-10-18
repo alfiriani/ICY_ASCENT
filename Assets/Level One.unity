@@ -200,7 +200,7 @@ GameObject:
   - component: {fileID: 403044371}
   - component: {fileID: 403044370}
   - component: {fileID: 403044373}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -536,7 +536,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.478889, y: -1.4300002, z: -10}
+  m_LocalPosition: {x: -0.21714425, y: 0.5594896, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -933,8 +933,8 @@ MonoBehaviour:
   m_YDamping: 2.6
   m_ZDamping: 1
   m_TargetMovementOnly: 1
-  m_ScreenX: 0.37
-  m_ScreenY: 0.58
+  m_ScreenX: 0.366
+  m_ScreenY: 0.647
   m_CameraDistance: 10
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
@@ -1005,7 +1005,8 @@ GameObject:
   m_Component:
   - component: {fileID: 775892036}
   - component: {fileID: 775892035}
-  m_Layer: 0
+  - component: {fileID: 775892037}
+  m_Layer: 7
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1073,12 +1074,63 @@ Transform:
   m_GameObject: {fileID: 775892034}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.06, y: 8.31, z: 0}
+  m_LocalPosition: {x: -0.06, y: 8.17, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &775892037
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775892034}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 15.746668, y: 11.81}
+    newSize: {x: 22, y: 29}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 2
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -9.022653, y: 7.98814}
+      - {x: -9.046597, y: -7.53908}
+      - {x: -8.921081, y: -13.952307}
+      - {x: 1.4689822, y: -13.874453}
+      - {x: 8.921077, y: -13.939503}
+      - {x: 8.878988, y: 7.988142}
+  m_UseDelaunayMesh: 0
 --- !u!1 &1105774752
 GameObject:
   m_ObjectHideFlags: 0
@@ -1219,6 +1271,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1591013575}
   - component: {fileID: 1591013574}
+  - component: {fileID: 1591013576}
   m_Layer: 0
   m_Name: follow cam
   m_TagString: Untagged
@@ -1274,13 +1327,28 @@ Transform:
   m_GameObject: {fileID: 1591013573}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.478889, y: -1.4300002, z: -10}
+  m_LocalPosition: {x: -3.4077775, y: -0.7599999, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 711796766}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1591013576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1591013573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f453f694addf4275988fac205bc91968, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BoundingShape2D: {fileID: 775892037}
+  m_Damping: 0.5
+  m_MaxWindowSize: -1
 --- !u!1 &1867551268
 GameObject:
   m_ObjectHideFlags: 0
@@ -1636,10 +1704,10 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 1591013575}
   - {fileID: 1867551270}
-  - {fileID: 1105774754}
   - {fileID: 775892036}
   - {fileID: 1881437474}
   - {fileID: 623141281}
   - {fileID: 544954021}
   - {fileID: 403044367}
   - {fileID: 106996277}
+  - {fileID: 1105774754}

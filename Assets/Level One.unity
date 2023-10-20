@@ -6395,6 +6395,7 @@ GameObject:
   - component: {fileID: 1277499282}
   - component: {fileID: 1277499286}
   - component: {fileID: 1277499285}
+  - component: {fileID: 1277499287}
   m_Layer: 0
   m_Name: Snowman_0
   m_TagString: Enemy
@@ -6480,7 +6481,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 253077476, guid: 834671ba069ed844abe4aef9dccefd7c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 13.320064, y: 13.259999}
@@ -6538,6 +6539,22 @@ MonoBehaviour:
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
     - {fileID: 1289399540}
+--- !u!114 &1277499287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277499281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2fe5546f775c47d2820aa5e8a715f53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
+    _objectReferences:
+    - {fileID: 11400000, guid: 74992af55a71b774ca0aedad949ebb47, type: 2}
 --- !u!1 &1289399540
 GameObject:
   m_ObjectHideFlags: 0
